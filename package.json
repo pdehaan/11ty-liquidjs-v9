@@ -1,18 +1,26 @@
 {
   "name": "11ty-liquidjs-v9",
+  "description": "",
   "version": "1.0.0",
-  "main": ".eleventy.js",
-  "scripts": {
-    "build": "eleventy",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
   "author": "Peter deHaan <peter@deseloper.com> (https://about.me/peterdehaan)",
-  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/pdehaan/11ty-liquidjs-v9/issues"
+  },
+  "dependencies": {},
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0-canary.2",
     "sort-json": "^2.0.0"
   },
-  "dependencies": {},
-  "description": ""
+  "homepage": "https://github.com/pdehaan/11ty-liquidjs-v9#readme",
+  "keywords": [],
+  "license": "MPL-2.0",
+  "main": ".eleventy.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdehaan/11ty-liquidjs-v9.git"
+  },
+  "scripts": {
+    "build": "eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
