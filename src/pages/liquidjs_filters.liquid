@@ -1,0 +1,25 @@
+---
+title: LiquidJS filters
+permalink: /liquidjs_filters.html
+---
+
+<h1>{{ title }}</h1>
+
+<table border="1">
+<thead>
+  <tr>
+    <th>NAME</th>
+    <th>FUNCTION</th>
+  </tr>
+</thead>
+<tbody>
+{% for filter in liquidjs.filters %}
+  <tr>
+    <td><code>{{ filter.name }}</code></td>
+    <td><pre><code>{{ filter.fn | firstLine }}</code></pre></td>
+  </tr>
+{% endfor %}
+</tbody>
+</table>
+
+<p>{{ versions.eleventyPkg.name }}@v{{ versions.eleventyPkg.version }} &mdash; {{ versions.liquidjsPkg.name }}@v{{ versions.liquidjsPkg.version }}</p>
