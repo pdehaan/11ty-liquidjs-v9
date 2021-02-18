@@ -1,26 +1,13 @@
 ---
 title: Nunjucks Filters
+docs: https://mozilla.github.io/nunjucks/templating.html#builtin-filters
 permalink: /nunjucks_filters.html
+lib: nunjucksPkg
 ---
 
 <h1>{{ title }}</h1>
 
-<table border="1">
-<thead>
-  <tr>
-    <th>NAME</th>
-    <th>FUNCTION</th>
-  </tr>
-</thead>
-<tbody>
-{% for filter in nunjucks.filters %}
-  <tr>
-    <td><code>{{ filter.name }}</code></td>
-    <td><pre><code>{{ filter.fn | firstLine }}</code></pre></td>
-  </tr>
-{% endfor %}
-</tbody>
-</table>
+{% set filters = nunjucks.filters %}
+{% include "filters_table.liquid" %}
 
-<p>{{ versions.eleventyPkg.name }}@v{{ versions.eleventyPkg.version }} &mdash; {{ versions.nunjucksPkg.name }}@v{{ versions.nunjucksPkg.version }}</p>
-
+<p>{% versionString versions, "eleventyPkg" %} &mdash; {% versionString versions, lib %}</p>

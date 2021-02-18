@@ -1,0 +1,18 @@
+<table border="1">
+<thead>
+  <tr>
+    <th>NAME</th>
+    <th>FILTER</th>
+  </tr>
+</thead>
+<tbody>
+{% for filter in filters %}
+  <tr>
+    <td><code>{{ filter.name }}</code></td>
+    <td><pre><code>{{ filter.fn | toString | firstLineCode }}</code></pre></td>
+  </tr>
+{% endfor %}
+</tbody>
+</table>
+
+<p><a href="{{ docs }}" target="_blank" rel="noopener noreferrer">{{ docs }}</a></p>

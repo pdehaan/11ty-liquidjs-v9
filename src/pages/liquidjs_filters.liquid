@@ -1,25 +1,13 @@
 ---
 title: LiquidJS filters
+docs: https://liquidjs.com/filters/overview.html
 permalink: /liquidjs_filters.html
+lib: liquidjsPkg
 ---
 
 <h1>{{ title }}</h1>
 
-<table border="1">
-<thead>
-  <tr>
-    <th>NAME</th>
-    <th>FUNCTION</th>
-  </tr>
-</thead>
-<tbody>
-{% for filter in liquidjs.filters %}
-  <tr>
-    <td><code>{{ filter.name }}</code></td>
-    <td><pre><code>{{ filter.fn | firstLine }}</code></pre></td>
-  </tr>
-{% endfor %}
-</tbody>
-</table>
+{% assign filters = liquidjs.filters %}
+{% render filters_table, filters:filters, docs:docs %}
 
-<p>{{ versions.eleventyPkg.name }}@v{{ versions.eleventyPkg.version }} &mdash; {{ versions.liquidjsPkg.name }}@v{{ versions.liquidjsPkg.version }}</p>
+<p>{% versionString versions, "eleventyPkg" %} &mdash; {% versionString versions, lib %}</p>
